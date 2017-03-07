@@ -12,11 +12,11 @@ public class AcademiaView {
     private ArrayList<Pessoa> pessoas;
     
 	int opcoes () {
-		System.out.println("** bem-vindo a academia digital**\n");
-		System.out.println("** Oque vc deseja fazer? **\n");
-		System.out.println("** 1 - cadastrar usuários**\n");
-		System.out.println("** 2 - ver usuárioss**\n");
-		System.out.println("** 3 - deletar usuários**\n");
+		System.out.println("** Bem-vindo a Academia Digital**\n");
+		System.out.println("** O que vc deseja fazer? **\n");
+		System.out.println("** 1 - Cadastrar usuÃ¡rios**\n");
+		System.out.println("** 2 - Ver usuÃ¡rioss**\n");
+		System.out.println("** 3 - Deletar usuÃ¡rios**\n");
 		
 		entrada = new Scanner(System.in);
 		int opcao = entrada.nextInt();
@@ -27,9 +27,9 @@ public class AcademiaView {
 	void realizaOperacao (int opcao) {
 		switch(opcao) {
 			case 1: {
-				System.out.println("**qual o tipo do usuario?**\n");
-				System.out.println("** 1 - cliente**\n");
-				System.out.println("** 2 - treinador**\n");
+				System.out.println("**Qual o tipo do usuario?**\n");
+				System.out.println("** 1 - Cliente**\n");
+				System.out.println("** 2 - Treinador**\n");
 				
 				entrada = new Scanner(System.in);
 				int opcaoUsuario = entrada.nextInt();
@@ -44,10 +44,10 @@ public class AcademiaView {
 				double altura = entrada.nextDouble();
 				
 				if (opcaoUsuario == 1) {
-					System.out.println("Digite o plano\n ");
-					System.out.println("** 1 - musculação**\n");
-					System.out.println("** 2 - musculação e dança**\n");
-					System.out.println("** 3 - musculação,  dança e luta**\n");
+					System.out.println("Digite o plano desejado\n ");
+					System.out.println("** 1 - MusculaÃ§Ã£o**\n");
+					System.out.println("** 2 - MusculaÃ§Ã£o e aerÃ³bica**\n");
+					System.out.println("** 3 - musculaÃ§Ã£o,  aerÃ³bica, e luta**\n");
 					int plano = entrada.nextInt();
 					
 					pessoas.add(new Cliente(nome, this._idIndex, peso, altura, plano));
@@ -55,7 +55,7 @@ public class AcademiaView {
 				} else if (opcaoUsuario == 2) {
 					
 				} else {
-					System.out.println("opção incorreta\n");
+					System.out.println("OpÃ§Ã£o incorreta!\n");
 				}
 			}
 		}
